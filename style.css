@@ -1,0 +1,76 @@
+*{
+ box-sizing: border-box;
+}
+
+body{ 
+    text-align: center;
+    background-color: rgb(103, 0, 97);
+    color: white;
+}
+
+#data-in-container{
+    background-color: rgb(36, 0, 34); 
+    width: 40%;
+    margin: 2rem auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 30rem;
+
+}
+
+#data-in-container p{
+    margin: 0;
+    font-weight: bold;
+}
+#btn-container{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+#title{
+ height: 1.5rem;
+}
+#data-in-container button{
+background-color: rgb(169, 55, 163);
+border: none;
+padding: 5px 14px;
+border-radius: 2px;
+cursor: pointer;
+}
+
+#data-in-container button:hover{
+ background-color: rgb(215, 99, 209);
+}
+
+#todo-lists ul{
+ width: 40%;
+ list-style: none;
+ max-width: 30rem;
+ margin: 4rem auto;
+ padding: 0;
+}
+
+.todo {
+ background-color: rgb(219, 48, 210);
+ margin: 1rem 0;
+ padding: 1rem;
+ display: flex;
+ justify-content: space-between;
+}
+
+.todo p{
+ margin: 0;
+}
+
+.edit-btn, .delete-btn{
+ border: 1px solid white;
+ background-color: transparent;
+ color: white;
+ padding: 5px 14px;
+ cursor: pointer;
+ border-radius: 2px;
+ margin: 0 4px;
+}

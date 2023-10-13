@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
+    <script src="vue.js" defer></script>
+    <title>Todos</title>
+</head>
+<body id="body-element">
+
+    <section id="first-section">
+        <div>
+            <h1>Todo Management</h1>
+            <h3>Manage your (daily) todos with ease! </h3>
+        </div>
+        <div id="data-in-container">
+            <p>Todo text</p>
+            <input type="text" id="title" v-model="enteredTodoText" maxlength="30" minlength="2">
+            <div id="btn-container">
+                <button id="save" @click="saveTodo">Save</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="todo-lists">
+        <p v-if="todos.length === 0 &&  !isLoading">No todos found, maybe start adding some!</p>
+        <p v-else-if="isLoading">Loading...</p>
+        <ul v-else>
+            <li class="todo" v-for="todo in todos">
+                <div><p>{{ todo.text }}</p></div>
+                <div class="actions">
+                    <button class="edit-btn" @click="updatingTodo(todo._id)">Edit</button> 
+                    <button class="delete-btn" @click="deleteTodo(todo._id)">Delete</button>
+                </div>
+            </li>
+        </ul>
+    </section>
+  
+</body>
+</html>
